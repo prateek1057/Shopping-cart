@@ -10,7 +10,7 @@ render() {
             <span className="badge badge-pill badge-success mr-4"><h6>Item {this.props.counterp.id}</h6></span> 
             <span className={this.getBadgeClass()}>{this.formatCount()}</span>
             <button onClick={()=>this.props.onIncrement(this.props.counterp)} className="btn btn-secondary btn-md m-2">
-                <b>+</b>
+                <span><strong>+</strong></span>
             </button>
             <button onClick={()=>this.props.onDecrement(this.props.counterp)} className="btn btn-secondary btn-md m-2">
                 -
