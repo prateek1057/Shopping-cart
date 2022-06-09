@@ -8,6 +8,7 @@ class Counters extends Component {
                 {this.props.counterlist.map(x=>< Counter 
                 key={x.id} 
                 counterp={x} 
+                onDecrement={this.props.onDecrement}
                 onIncrement={this.props.onIncrement}
                 onDelete={this.props.onDelete} />)}
             </div>
