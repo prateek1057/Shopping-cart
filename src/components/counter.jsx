@@ -12,6 +12,9 @@ render() {
             <button onClick={()=>this.props.onIncrement(this.props.counterp)} className="btn btn-secondary btn-md m-2">
                 Increment
             </button>
+            <button onClick={()=>this.props.onDecrement(this.props.counterp)} className="btn btn-secondary btn-md m-2">
+                Decrement
+            </button>
             <button onClick={()=>this.props.onDelete(this.props.counterp.id)} className="btn btn-danger btn-sm m-2">Delete</button>
              
 
