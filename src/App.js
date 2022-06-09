@@ -26,7 +26,7 @@ handleDecrement=(counterp)=>{
   const counterlist=[...this.state.counterlist];
   const index=counterlist.indexOf(counterp);
   //counterlist[index]={...counterp};
-  counterlist[index].value--;
+ counterlist[index].value>0 ?counterlist[index].value--: ;
   this.setState({counterlist});
 };
 
