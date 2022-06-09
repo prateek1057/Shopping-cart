@@ -22,6 +22,14 @@ handleIncrement=(counterp)=>{
     this.setState({counterlist});
 };
 
+handleDecrement=(counterp)=>{
+  const counterlist=[...this.state.counterlist];
+  const index=counterlist.indexOf(counterp);
+  //counterlist[index]={...counterp};
+  counterlist[index].value--;
+  this.setState({counterlist});
+};
+
 handleDelete=(counterId)=>{
     let counterlistnew=this.state.counterlist.filter(c=>c.id!=counterId);
     this.setState({ counterlist:counterlistnew});
@@ -40,6 +48,7 @@ render() {
       <main className="container">
       <Counters
       onIncrement={this.handleIncrement}
+      onDecrement={this.handleDecrement}
       onDelete={this.handleDelete}
       onReset={this.handleReset}
       counterlist={this.state.counterlist}
@@ -51,7 +60,3 @@ render() {
 }
  
 export default App;
-
-
-
-
